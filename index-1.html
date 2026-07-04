@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WLED Song BIN Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WLED Song BIN Creator</h1>
+            <p class="subtitle">Convert TXT songs to BIN format</p>
+        </header>
+
+        <section class="controls">
+            <div class="button-group">
+                <button id="chooseFile" class="btn btn-primary">Choose TXT</button>
+                <button id="loadFile" class="btn btn-primary" disabled>Load TXT</button>
+                <button id="generateBin" class="btn btn-success" disabled>Generate BIN</button>
+            </div>
+            <div class="button-group">
+                <button id="verifyBin" class="btn btn-info" disabled>Verify BIN</button>
+                <button id="downloadBin" class="btn btn-success" disabled>Download BIN</button>
+                <button id="clearAll" class="btn btn-danger">Clear</button>
+            </div>
+            <input type="file" id="fileInput" accept=".txt,.bin" style="display: none;">
+        </section>
+
+        <section class="content">
+            <div class="panel">
+                <h2>Timeline Preview</h2>
+                <div id="timelineContainer" class="timeline-container">
+                    <p class="empty-state">Load a TXT file to see the timeline</p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>BIN Verification</h2>
+                <div id="verifyContainer" class="verify-container">
+                    <p class="empty-state">Generate and verify a BIN file</p>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Messages</h2>
+                <div id="messageContainer" class="message-container">
+                    <p class="message-info">Ready</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
